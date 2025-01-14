@@ -1,0 +1,22 @@
+.heroPage {
+    background-image: url("https://atlassianblog.wpengine.com/wp-content/uploads/2022/01/2240x1090-1-1560x760.jpg");
+    background-size: cover;
+    height: 80vh;
+    max-height: 700px;
+}
+.heroDesc {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroDesc>p {
+    background-color: aliceblue;
+    padding: 14px;
+    border-radius: 16px;
+    opacity: 0.9;
+    width: 300px;
+}

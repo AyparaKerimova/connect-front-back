@@ -1,0 +1,13 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap:12px;
+    background-color: rgb(221, 142, 68);
+    padding: 8px;
+    border-radius: 16px;
+}
+
+.navbarItem {
+    text-decoration: none;
+    color: rgb(230, 220, 220);
+}

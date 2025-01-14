@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+import Hero from '../components/Hero';
+import UserList from '../components/UserList';
+import UserCard from '../components/UserCard';
 
 const Home = () => {
   const [data,setData] = useState([]);
@@ -14,18 +17,20 @@ const Home = () => {
   },[])
   return (
     <>
-    <ul>
-      {
-        data.map((e,idx)=>{
-          return(
-            <li key={idx}>
-             { e.fullName}
-            {e.userName}
-            </li>
-          )
-        })
-      }
-      </ul>
+    <div style={{  overflow: "hidden"}}>
+    <Hero/>
+      <UserList>
+        {
+          data && data.map((e)=>{
+            return(
+              <div className='col-lg-3 col-md-6 col-sm-12'>
+                <UserCard key={e._id} userName={e.userName} url={e.url} />
+              </div>
+            )
+          })
+        }
+      </UserList>
+      </div>
     </>
   )
 }
